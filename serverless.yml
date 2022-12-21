@@ -1,15 +1,11 @@
 service: prisma-aws-lambda-example
 plugins:
-  - serverless-webpack
-  - serverless-webpack-prisma
-
-custom:
-  webpack:
-    includeModules: true
+  - serverless-esbuild
+  - serverless-dotenv-plugin
 
 provider:
   name: aws
-  region: us-east-1
+  region: us-west-2
   runtime: nodejs14.x
 
 functions:
@@ -43,3 +39,9 @@ functions:
       - http:
           method: GET
           path: /posts
+
+package:
+  individually: true
+  patterns:
+    - "node_modules/.prisma/client/schema.prisma"
+    - "node_modules/.prisma/client/libquery_engine-rhel-*"
