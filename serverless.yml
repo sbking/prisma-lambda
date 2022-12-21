@@ -1,4 +1,4 @@
-service: prisma-aws-lambda-example
+service: prisma-aws-lambda-example-4-7-1
 plugins:
   - serverless-esbuild
   - serverless-dotenv-plugin
