@@ -1,4 +1,4 @@
-service: prisma-lambda-4-7-1
+service: prisma-lambda-4-8-0
 plugins:
   - serverless-esbuild
   - serverless-dotenv-plugin
